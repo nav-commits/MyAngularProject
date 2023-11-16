@@ -1,0 +1,33 @@
+.about-container {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+.about-container h1 {
+  color: #333;
+  font-size: 2em;
+}
+
+.about-container p {
+  color: #666;
+  font-size: 1.2em;
+}
+
+.styled-button {
+  background-color: rgb(76, 175, 153);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+.styled-button:hover {
+  background-color: rgb(3, 71, 56);
+}
