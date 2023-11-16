@@ -8,11 +8,10 @@ import { DataService } from '../../../Data/data.service';
   styleUrl: './home.component.css',
 })
 export class HomeComponent {
-  techNames!: Tech[];
+  techNames: Tech[] = [{ name: 'Angular' }, { name: 'React' }, { name: 'Vue' }]
 
   constructor(private dataService: DataService) {
-    this.techNames = this.dataService.getTechNames();
-    console.log(this.techNames.filter((tech) => tech.name === 'Angular'));
+    this.dataService.setTechNames(this.techNames);
   }
 
   ngOnInit(): void {
@@ -20,6 +19,6 @@ export class HomeComponent {
   }
 
   onClick() {
-    this.dataService.onClick(this.techNames);
+    this.dataService.onClick();
   }
 }
