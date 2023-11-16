@@ -8,13 +8,5 @@ import { DataService } from './Data/data.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  techNames: Tech[] = [{ name: 'Angular' }, { name: 'React' }, { name: 'Vue' }];
 
-  constructor(private dataService: DataService) {
-    this.dataService.setTechNames(this.techNames);
-  }
-
-  onClick() {
-    this.dataService.onClick(this.techNames);
-  }
 }

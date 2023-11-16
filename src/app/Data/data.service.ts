@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Tech } from './array';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class DataService {
   private techNames!: Tech[];
@@ -15,16 +15,17 @@ export class DataService {
     return this.techNames;
   }
 
-  onClick(techNames: Tech[]) {
-    techNames.map((tech) => {
+  onClick() {
+    this.techNames.filter((tech) => {
       if (tech.name === 'Angular') {
-        tech.name = 'React';
-      } else if (tech.name === 'React') {
-        tech.name = 'Vue';
-      } else if (tech.name === 'Vue') {
-        tech.name = 'Angular';
+        tech.name = 'Angular 12 rocks';
+      }
+      else if (tech.name === 'React') {
+        tech.name = 'React 17 rocks';
+      }
+      else if (tech.name === 'Vue') {
+        tech.name = 'Vue 3 is not sucks';
       }
     });
   }
-
 }
