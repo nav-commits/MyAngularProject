@@ -8,7 +8,9 @@ import { DataService } from '../../../Data/data.service';
   styleUrl: './home.component.css',
 })
 export class HomeComponent {
-  techNames: Tech[] = [{ name: 'Angular' }, { name: 'React' }, { name: 'Vue' }]
+  techNames: Tech[] = [{ name: 'Angular' }, { name: 'React' }, { name: 'Vue' }];
+  value = '';
+
 
   constructor(private dataService: DataService) {
     this.dataService.setTechNames(this.techNames);
@@ -18,7 +20,9 @@ export class HomeComponent {
     this.techNames = this.dataService.getTechNames();
   }
 
-  onClick() {
-    this.dataService.onClick();
+  onAddItem() {
+    this.techNames.push({ name: this.value })
   }
+
+
 }

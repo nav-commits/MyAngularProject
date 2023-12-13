@@ -14,18 +14,4 @@ export class DataService {
   getTechNames() {
     return this.techNames;
   }
-
-  onClick() {
-    this.techNames.filter((tech) => {
-      if (tech.name === 'Angular') {
-        tech.name = 'Angular 12 rocks';
-      }
-      else if (tech.name === 'React') {
-        tech.name = 'React 17 rocks';
-      }
-      else if (tech.name === 'Vue') {
-        tech.name = 'Vue 3 is not sucks';
-      }
-    });
-  }
 }
